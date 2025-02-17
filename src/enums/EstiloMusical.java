@@ -6,5 +6,6 @@ public enum EstiloMusical {
     MARCHINHA,
     ROCK,
     SAMBA,
-    PAGODE
+    PAGODE,
+    INFANTIL
 }
