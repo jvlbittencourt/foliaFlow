@@ -1,6 +1,6 @@
 package enums;
 
-public enum Regiao {
+public enum Region {
     ZN,
     ZS,
     ZO,

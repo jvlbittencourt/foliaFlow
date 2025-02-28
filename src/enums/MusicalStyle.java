@@ -1,6 +1,6 @@
 package enums;
 
-public enum EstiloMusical {
+public enum MusicalStyle {
     AXE,
     FUNK,
     MARCHINHA,

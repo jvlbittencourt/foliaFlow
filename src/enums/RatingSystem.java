@@ -1,6 +1,6 @@
 package enums;
 
-public enum ClassificacaoIndicativa {
+public enum RatingSystem {
         AL,
         A10,
         A12,

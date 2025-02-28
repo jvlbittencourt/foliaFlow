@@ -1,26 +1,26 @@
-import enums.EstiloMusical;
-import enums.Regiao;
-import model.Bairro;
-import model.Bloco.Bloco;
-import model.Bloco.BlocoInfantil;
-import model.Bloco.BlocoTematico;
-import model.Bloco.BlocoTradicional;
+import enums.MusicalStyle;
+import enums.Region;
+import model.Neighborhood;
+import model.neighborhood.BlocoInfantil;
+import model.neighborhood.Parade;
+import model.neighborhood.ThemedParade;
+import model.neighborhood.TraditionalParade;
 
 public class Main {
     public static void main(String[] args) {
-        Bairro laranjeiras = new Bairro("Laranjeiras", Regiao.ZS );
-        Bairro ipanema = new Bairro("ipanema", Regiao.ZS );
-        Bairro lapa = new Bairro("Lapa", Regiao.ZC );
-        Bairro centro = new Bairro("Centro", Regiao.ZC );
-        Bairro jacarepagua = new Bairro("Jacarepagua", Regiao.ZO );
-        Bairro bangu = new Bairro("bangu", Regiao.ZO );
+        Neighborhood laranjeiras = new Neighborhood("Laranjeiras", Region.ZS);
+        Neighborhood ipanema = new Neighborhood("ipanema", Region.ZS);
+        Neighborhood lapa = new Neighborhood("Lapa", Region.ZC);
+        Neighborhood centro = new Neighborhood("Centro", Region.ZC);
+        Neighborhood jacarepagua = new Neighborhood("Jacarepagua", Region.ZO);
+        Neighborhood bangu = new Neighborhood("bangu", Region.ZO);
 
-        BlocoTradicional bolaPreta = new BlocoTradicional("Bola Preta", EstiloMusical.MARCHINHA, centro, 100000 );
-        BlocoInfantil hihappy = new BlocoInfantil("hihappy", EstiloMusical.INFANTIL, ipanema, 5000 );
-        BlocoTematico beatles = new BlocoTematico("Beatles", EstiloMusical.ROCK, lapa, 150000);
-        Bloco batucar = new Bloco("Batucar para ser Feliz", EstiloMusical.SAMBA, jacarepagua, 10000);
-        Bloco bandaBangu = new BlocoTradicional("Banda de Bangu", EstiloMusical.MARCHINHA, bangu, 25000);
-        BlocoTematico fluzao = new BlocoTematico("Fluzão", EstiloMusical.MARCHINHA, laranjeiras, 10000);
+        TraditionalParade bolaPreta = new TraditionalParade("Bola Preta", MusicalStyle.MARCHINHA, centro, 100000);
+        BlocoInfantil hihappy = new BlocoInfantil("hihappy", MusicalStyle.INFANTIL, ipanema, 5000);
+        ThemedParade beatles = new ThemedParade("Beatles", MusicalStyle.ROCK, lapa, 150000);
+        Parade batucar = new Parade("Batucar para ser Feliz", MusicalStyle.SAMBA, jacarepagua, 10000);
+        Parade bandaBangu = new TraditionalParade("Banda de Bangu", MusicalStyle.MARCHINHA, bangu, 25000);
+        ThemedParade fluzao = new ThemedParade("Fluzão", MusicalStyle.MARCHINHA, laranjeiras, 10000);
 
         System.out.println(bolaPreta.toString());
         System.out.println(hihappy.toString());
@@ -28,8 +28,6 @@ public class Main {
         System.out.println(bandaBangu.toString());
         System.out.println(beatles.toString());
         System.out.println(fluzao.toString());
-
-
 
     }
 }
